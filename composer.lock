@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82c1225007c678bbedfaec41ad92b817",
+    "content-hash": "9d2bdf284a272fd3585b3977e28283fe",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4023,9 +4023,14 @@
         {
             "name": "openeuropa/oe_theme",
             "version": "2.12.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openeuropa/oe_theme.git",
+                "reference": "1965221add72e44eacbdcfafc3b141c4808c73a8"
+            },
             "dist": {
-                "type": "tar",
-                "url": "https://github.com/openeuropa/oe_theme/releases/download/2.12.2/oe_theme-2.12.2.tar.gz",
+                "type": "zip",
+                "url": "https://api.github.com/repos/openeuropa/oe_theme/zipball/1965221add72e44eacbdcfafc3b141c4808c73a8",
                 "reference": "1965221add72e44eacbdcfafc3b141c4808c73a8",
                 "shasum": ""
             },

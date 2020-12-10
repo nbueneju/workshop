@@ -16,3 +16,7 @@
 /grumphp.yml
 /runner.yml
 /docker-compose.*.yml
+
+# Ignore dump files
+/*.sql
+/*.sql.gz
