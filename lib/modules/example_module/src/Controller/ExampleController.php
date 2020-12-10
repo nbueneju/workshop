@@ -1,20 +1,22 @@
 <?php
-/**
- * @file
- * Contains \Drupal\example_module\Controller\ExampleController.
- */
- 
+
 namespace Drupal\example_module\Controller;
- 
+
 use Drupal\Core\Controller\ControllerBase;
- 
+
+/**
+ * Defines an ExampleController class.
+ */
 class ExampleController extends ControllerBase {
+
+  /**
+   * Content function.
+   */
   public function content() {
-    return array(
+    return [
       '#type' => 'markup',
-      '#markup' => t('Hello, this is an example'),
-    );
+      '#markup' => 'Hello, this is an example',
+    ];
   }
+
 }
-
-

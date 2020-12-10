@@ -2,5 +2,6 @@ name: Example Module
 description: An experimental module to build our first Drupal 8 module
 package: Custom
 type: module
-version: 1.0
 core: 8.x
+php: 7.3
+core_version_requirement: ^8
