@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: fpfis/httpd-php-dev:7.1
+    image: fpfis/httpd-php-dev:7.3
     working_dir: ${PWD} # Set by default to /var/www/html. Change it to have the pwd path as working dir.
     ports:
       - 8080:8080
