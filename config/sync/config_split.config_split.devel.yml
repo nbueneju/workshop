@@ -1,0 +1,16 @@
+uuid: 3570b76f-a405-42ec-a01d-ebf2323404e3
+langcode: en
+status: true
+dependencies: {  }
+id: devel
+label: Devel
+description: ''
+folder: ../config/devel
+module:
+  devel: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
