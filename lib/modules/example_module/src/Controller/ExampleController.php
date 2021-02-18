@@ -15,6 +15,7 @@ class ExampleController extends ControllerBase {
   public function content() {
     return [
       '#type' => 'markup',
+
       '#markup' => 'Hello, this is an example',
     ];
   }

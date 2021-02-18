@@ -1,0 +1,36 @@
+upgrade_commands:
+  # The default commands will be executed on every
+  # environment. Development, pipeline, acceptance
+  # AND production deployments.
+  default:
+    - ./vendor/bin/drush state:set system.maintenance_mode 1 --input-format=integer -y
+    - ./vendor/bin/drush cache:rebuild
+    - ./vendor/bin/drush updatedb -y
+    - if [ -e ./config/sync/core.extension.yml ]; then ./vendor/bin/drush config:import -y; else echo "No config to import. Continuing..."; fi
+    - ./vendor/bin/drush cache:rebuild
+    - ./vendor/bin/drush state:set system.maintenance_mode 0 --input-format=integer -y
+    - ./vendor/bin/drush cache:rebuild
+    - ./vendor/bin/drush uli
+  # The append section allows you to append certain
+  # commands to the deployments on production or
+  # acceptance environments. This is handy for if
+  # you have sanitization on the user passwords, to
+  # either reset a user password or generate a uli.
+  append:
+    acceptance:
+      - ./vendor/bin/drush uli
+    production:
+      - ./vendor/bin/drush status
+cron_commands:
+  - drush cron
+extra_pkgs:
+  - nano
+solr: False
+tika_version: 1.22
+fpfis_config: False
+php_version: 7.2
+refresh_database: True
+mysql_version: 5.7
+install_clean: yes
+selenium_version: 3.141.59
+skip_php_check: False
